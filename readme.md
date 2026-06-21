@@ -194,6 +194,12 @@ For dataset license, please check [this](https://github.com/NVlabs/FoundationSte
 }
 ```
 
+
+
+
+https://github.com/user-attachments/assets/bf68cdc4-9beb-45fd-9edd-b529dbbcf72d    full
+https://github.com/user-attachments/assets/8e0c2b83-c02c-430d-a7f8-b22341543db4    slight
+
 # Acknowledgement
 We would like to thank Gordon Grigor, Jack Zhang, Karsten Patzwaldt, Hammad Mazhar and other NVIDIA Isaac team members for their tremendous engineering support and valuable discussions. Thanks to the authors of [DINOv2](https://github.com/facebookresearch/dinov2), [DepthAnything V2](https://github.com/DepthAnything/Depth-Anything-V2), [Selective-IGEV](https://github.com/Windsrain/Selective-Stereo) and [RAFT-Stereo](https://github.com/princeton-vl/RAFT-Stereo) for their code release. Finally, thanks to CVPR reviewers and AC for their appreciation of this work and constructive feedback.
 
