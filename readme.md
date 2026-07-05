@@ -82,10 +82,11 @@ https://github.com/user-attachments/assets/ff13981b-509c-4d51-8538-0edf07ee1532
 
 1. **目标检测**：YOLOv11 检测左眼视图中的目标并提供 2D 边界框
 2. **深度估计**：Foundation Stereo 根据左右眼视差为整个画面生成深度图
-3. **3D 边界框估计**：根据深度估计以及左右眼视差生成 3D 边界框
+3. **3D 边界框估计**：根据检测框的深度估计以及左右眼视差生成 3D 边界框
 4. **可视化**：渲染 3D 边界框和俯视图，以更好地理解空间关系
 
-# 引用
+# 致谢
+
 YOLOv11 by Ultralytics
 
 Depth Anything v2 by Microsoft
