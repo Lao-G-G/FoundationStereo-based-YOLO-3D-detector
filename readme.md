@@ -23,20 +23,15 @@ python detect_and_track/run_stereo.py --left_file ./data_left --right_file ./dat
 
 ## 演示视频
 
+若视频不可加载请点击超链接。
+
 [FULL](https://www.bilibili.com/video/BV1WMjt6bEXi/?)
-
-
 
 https://github.com/user-attachments/assets/56ba7cce-12a5-4920-a474-68b0cbc006a3
 
-
-
-<video width="630" height="300" src="https://github.com/user-attachments/assets/56ba7cce-12a5-4920-a474-68b0cbc006a3"></video>
-
-https://github.com/user-attachments/assets/c2b1e24b-3cc2-41c0-ac09-006fc5a33ae6
-
-
 [SLIGHT](https://www.bilibili.com/video/BV1WMjt6bEXi?p=2&)
+
+https://github.com/user-attachments/assets/ff13981b-509c-4d51-8538-0edf07ee1532
 
 注：
 - 左右眼输入数据需要是序列图像，且应经过校正，无畸变，左右图像之间的极线应呈水平方向。可以使用[KITTI](https://www.cvlibs.net/datasets/kitti/raw_data.php)官方数据
@@ -45,15 +40,46 @@ https://github.com/user-attachments/assets/c2b1e24b-3cc2-41c0-ac09-006fc5a33ae6
 - 对于高分辨率图像（>1000px），您可以：(1) 使用 `--hiera 1` 启用分层推理，以获得全分辨率深度图，但速度较慢；或者 (2) 使用较小的缩放比例，例如 `--scale 0.5`，以获得缩小分辨率但速度更快的深度图。
 若需加快推理速度，可通过 `--scale 0.5` 等参数降低输入图像分辨率，并减少精化迭代次数，例如使用 `--valid_iters 16`.
 
+## 配置选项
+
+您可以在 `run.py` 或命令行修改以下参数：
+
+### 输入/输出:
+
+`--left_dir`: 左眼视图
+
+`--right_dir`: 右眼视图
+
+`--output_path`: 输出路径
+
+### 模型选择:
+
+`--yolo_model`: YOLOv11 模型大小 ("nano", "small", "medium", "large", "extra")
+
+`--ckpt_dir`: Foundation Stereo 模型大小 (编码器大小："Vit-large", "Vit-small")
+
+### 检测设置:
+
+`--conf_threshold`: 物体检测的置信阈值
+
+`--iou_threshold`: NMS的IOU阈值
+
+### 功能开关:
+
+`--no_tracking`: 目标跟踪
+
+`--no_bev`: BEV可视化
+
+  `--z_far`: BEV可视化最大深度
+
 # 工作流
 
-
-
-https://github.com/user-attachments/assets/bf68cdc4-9beb-45fd-9edd-b529dbbcf72d    full
-https://github.com/user-attachments/assets/8e0c2b83-c02c-430d-a7f8-b22341543db4    slight
-
-# Acknowledgement
-We would like to thank Gordon Grigor, Jack Zhang, Karsten Patzwaldt, Hammad Mazhar and other NVIDIA Isaac team members for their tremendous engineering support and valuable discussions. Thanks to the authors of [DINOv2](https://github.com/facebookresearch/dinov2), [DepthAnything V2](https://github.com/DepthAnything/Depth-Anything-V2), [Selective-IGEV](https://github.com/Windsrain/Selective-Stereo) and [RAFT-Stereo](https://github.com/princeton-vl/RAFT-Stereo) for their code release. Finally, thanks to CVPR reviewers and AC for their appreciation of this work and constructive feedback.
+1. **目标检测**：YOLOv11 检测左眼视图中的目标并提供 2D 边界框
+2. **深度估计**：Foundation Stereo 根据左右眼视差为整个画面生成深度图
+3. **3D 边界框估计**：根据深度估计以及左右眼视差生成 3D 边界框
+4. **可视化**：渲染 3D 边界框和俯视图，以更好地理解空间关系
 
 # 引用
-For commercial inquiries, additional technical support, and other questions, please reach out to [Bowen Wen](https://wenbowen123.github.io/) (bowenw@nvidia.com).
+YOLOv11 by Ultralytics
+Depth Anything v2 by Microsoft
+Foundation Stereo by Nvidia
