@@ -70,7 +70,8 @@ https://github.com/user-attachments/assets/ff13981b-509c-4d51-8538-0edf07ee1532
 - 请勿调换左右图像的位置。左图必须确实来自左侧摄像头（图像中的物体应向右偏移）。
 - 我们建议使用无损压缩的 PNG 文件。
 - 对于高分辨率图像（>1000px），您可以：(1) 使用 `--hiera 1` 启用分层推理，以获得全分辨率深度图，但速度较慢；或者 (2) 使用较小的缩放比例，例如 `--scale 0.5`，以获得缩小分辨率但速度更快的深度图。
-若需加快推理速度，可通过 `--scale 0.5` 等参数降低输入图像分辨率，并减少精化迭代次数，例如使用 `--valid_iters 16`.
+若需加快推理速度，可通过 `--scale 0.5` 等参数降低输入图像分辨率，并减少精化迭代次数，例如使用 `--valid_iters 16`。
+- 如果需要更快的推理速度可以选择[Fast版本](https://github.com/Lao-G-G/Fast-FoundationStereo-and-yolov11-based-detector)。
 
 ## 配置选项
 
