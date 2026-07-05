@@ -1,5 +1,7 @@
 # 基于 Foundation Stereo 和 YOLO v11 的3D目标跟踪系统
 
+这是一个离线3D物体检测系统，将用于物体检测的YOLOv11与用于深度估计的Foundation Stereo相结合，从而生成3D边界框并实现BEV可视化。
+
 # 安装环境
 
 ```
