@@ -24,8 +24,14 @@ python detect_and_track/run_stereo.py --left_file ./data_left --right_file ./dat
 ## 演示视频
 
 [FULL](https://www.bilibili.com/video/BV1WMjt6bEXi/?)
-[FULL](video/)
-<video width="630" height="300" src="https://github.com/user-attachments/assets/bf68cdc4-9beb-45fd-9edd-b529dbbcf72d"></video>
+
+
+
+https://github.com/user-attachments/assets/56ba7cce-12a5-4920-a474-68b0cbc006a3
+
+
+
+<video width="630" height="300" src="https://github.com/user-attachments/assets/56ba7cce-12a5-4920-a474-68b0cbc006a3"></video>
 
 https://github.com/user-attachments/assets/c2b1e24b-3cc2-41c0-ac09-006fc5a33ae6
 
