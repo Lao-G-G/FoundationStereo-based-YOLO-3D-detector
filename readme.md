@@ -33,6 +33,12 @@ https://github.com/user-attachments/assets/56ba7cce-12a5-4920-a474-68b0cbc006a3
 
 https://github.com/user-attachments/assets/ff13981b-509c-4d51-8538-0edf07ee1532
 
+| 模型     | 推理速度||||
+|----------|-|-|-|----------------------------|
+|      | total | Detect | Depth | Avg FPS |
+| FULL  | 1106ms|19ms|1084ms|0.8 |
+| SLIGHT  | 925ms|23ms|892ms|1.0            |
+
 注：
 - 左右眼输入数据需要是序列图像，且应经过校正，无畸变，左右图像之间的极线应呈水平方向。可以使用[KITTI](https://www.cvlibs.net/datasets/kitti/raw_data.php)官方数据
 - 请勿调换左右图像的位置。左图必须确实来自左侧摄像头（图像中的物体应向右偏移）。
@@ -81,5 +87,7 @@ https://github.com/user-attachments/assets/ff13981b-509c-4d51-8538-0edf07ee1532
 
 # 引用
 YOLOv11 by Ultralytics
+
 Depth Anything v2 by Microsoft
+
 Foundation Stereo by Nvidia
