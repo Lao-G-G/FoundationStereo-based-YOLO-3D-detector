@@ -25,7 +25,7 @@ python detect_and_track/run_stereo.py --left_file ./data_left --right_file ./dat
 
 [FULL](https://www.bilibili.com/video/BV1WMjt6bEXi/?)
 [FULL](video/)
-<video width="630" height="300" src="https://user-images.githubusercontent.com/126239/151127893-5c98ba8d-c431-4a25-bb1f-e0b33645a2b6.mp4"></video>
+<video width="630" height="300" src="https://github.com/Lao-G-G/FoundationStereo-based-YOLO-3D-detector/blob/main/video/slightly.mp4"></video>
 
 https://github.com/user-attachments/assets/c2b1e24b-3cc2-41c0-ac09-006fc5a33ae6
 
