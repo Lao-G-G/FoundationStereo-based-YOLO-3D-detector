@@ -89,8 +89,8 @@ https://github.com/user-attachments/assets/ff13981b-509c-4d51-8538-0edf07ee1532
 
 # 致谢
 
-YOLOv11 by Ultralytics
+[YOLOv11 by Ultralytics](https://github.com/ultralytics/ultralytics)
 
-Depth Anything v2 by Microsoft
+[Depth Anything v2 by TikTok](https://github.com/DepthAnything/Depth-Anything-V2)
 
-Foundation Stereo by Nvidia
+[Foundation Stereo by Nvidia](https://github.com/NVlabs/FoundationStereo)
