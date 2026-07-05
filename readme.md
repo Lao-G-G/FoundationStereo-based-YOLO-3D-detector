@@ -20,6 +20,10 @@
 │   ├── update.py              # GRU 迭代更新
 │   ├── distill_block.py       # 蒸馏块
 │   └── utils/
+├── depth_anything/            # Depth Anything V2 backbone
+│   └── ...
+├── dinov2/                    # DINOv2 backbone 配置文件
+│   └── ...
 ├── Utils.py                   # 工具函数
 ├── requirements.txt           # Python 依赖
 ├── readme.md                  # 项目说明
