@@ -22,9 +22,11 @@ python detect_and_track/run_stereo.py --left_file ./data_left --right_file ./dat
 ```
 
 ## 演示视频
-[FULL](https://github.com/user-attachments/assets/bf68cdc4-9beb-45fd-9edd-b529dbbcf72d)
 
-[SLIGHT](https://github.com/user-attachments/assets/8e0c2b83-c02c-430d-a7f8-b22341543db4)
+[FULL](https://www.bilibili.com/video/BV1WMjt6bEXi/?)
+
+
+[SLIGHT](https://www.bilibili.com/video/BV1WMjt6bEXi?p=2&)
 
 注：
 - 左右眼输入数据需要是序列图像，且应经过校正，无畸变，左右图像之间的极线应呈水平方向。可以使用[KITTI](https://www.cvlibs.net/datasets/kitti/raw_data.php)官方数据
