@@ -24,7 +24,7 @@ python detect_and_track/run_stereo.py --left_file ./data_left --right_file ./dat
 ## 演示视频
 
 [FULL](https://www.bilibili.com/video/BV1WMjt6bEXi/?)
-
+[FULL](video/)
 
 [SLIGHT](https://www.bilibili.com/video/BV1WMjt6bEXi?p=2&)
 
