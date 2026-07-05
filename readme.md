@@ -2,6 +2,30 @@
 
 这是一个离线3D物体检测系统，将用于物体检测的YOLOv11与用于深度估计的Foundation Stereo相结合，从而生成3D边界框并实现BEV可视化。
 
+# 项目结构
+
+```
+├── detect_and_track/          # 主要代码
+│   ├── run_stereo.py          # 主入口
+│   ├── stereo_depth_model.py  # Fast-FoundationStereo 深度封装
+│   ├── detection_model.py     # YOLOv11 检测器
+│   ├── bbox3d_utils.py        # 3D 框估计 + BEV 可视化
+│   ├── load_camera_params.py  # 相机参数加载
+│   └── test_single.py         # 单帧诊断脚本
+├── core/                      # Fast-FoundationStereo 核心模型
+│   ├── foundation_stereo.py   # 模型定义
+│   ├── extractor.py           # 共享 backbone 特征提取
+│   ├── geometry.py            # 几何编码体
+│   ├── submodule.py           # 子模块 (GWC, 注意力, etc.)
+│   ├── update.py              # GRU 迭代更新
+│   ├── distill_block.py       # 蒸馏块
+│   └── utils/
+├── Utils.py                   # 工具函数
+├── requirements.txt           # Python 依赖
+├── readme.md                  # 项目说明
+└── .gitignore
+```
+
 # 安装环境
 
 ```
@@ -81,6 +105,16 @@ https://github.com/user-attachments/assets/ff13981b-509c-4d51-8538-0edf07ee1532
   `--z_far`: BEV可视化最大深度
 
 # 工作流
+
+```
+左目图像 ──→ YOLOv11 2D 检测 ──→ 2D 边界框 + 类别 + 跟踪 ID
+
+左目+右目 ──→ FoundationStereo ──→ 全图像素级 metric 深度图
+              ↑                         ↓
+        2D 框 + 深度值 + 相机内参 → 反向投影 → 3D 边界框 (x, y, z, 尺寸, 朝向)
+                                           ↓
+                                      可视化：3D 立体框 + BEV 俯视图
+```
 
 1. **目标检测**：YOLOv11 检测左眼视图中的目标并提供 2D 边界框
 2. **深度估计**：Foundation Stereo 根据左右眼视差为整个画面生成深度图
