@@ -35,7 +35,7 @@ https://github.com/user-attachments/assets/56ba7cce-12a5-4920-a474-68b0cbc006a3
 
 https://github.com/user-attachments/assets/ff13981b-509c-4d51-8538-0edf07ee1532
 
-| 模型     | 推理速度||||
+| 模型     | 推理速度(3080 10G)||||
 |----------|-|-|-|----------------------------|
 |      | total | Detect | Depth | Avg FPS |
 | FULL  | 1106ms|19ms|1084ms|0.8 |
